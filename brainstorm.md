@@ -24,8 +24,7 @@ Desde Console Applications a aplicativos híbridos com Xamarin (prefiro react na
 ### ReactJS
 A cerca de 2 anos comecei a me aventurar no mundo frontend com mais afinco,
 ganhei bastante experiencia com CSS e seus flexboxes e uma nova paixão o ReactJS
-a propósito está é uma pagina feita com ele.
-a propósito, somos responsivos! pode acessar do celular ou computador!
+a propósito está é uma pagina feita com ele, somos responsivos! pode acessar do celular ou computador!
 
 ### React Native
 Com a experiencia que ganhei com ReactJS por que não tenta o React Native?
