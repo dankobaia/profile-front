@@ -7,9 +7,13 @@
 > Apresentação + Foto
 
 Olá meu nome é Daniel Porto, sou desenvolvedor Full-stack e estou pronto para ajudar com seu projeto.
+
 Tenho bastante bagagem com C# e criações de APIs e integrações com diversos sistemas desde Chatbots a Gateway de pagamentos.
+
 Sou entusiasta do ReactJS, simples, rapido e limpo. Vamos componentizar?
+
 Falando de React também trabalho com React Native, com um código temos um APP Android e iOS.
+
 Gosto de desafios e designer patterns.
 
 
