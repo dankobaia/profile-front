@@ -7,12 +7,26 @@ import { Menu, Nav, MenuItem, LinkContainer } from "./styles";
 export default function() {
   const location = useLocation();
   const [path, setPath] = useState();
+  const menuItens = [
+    {
+      title: "=>Profile",
+      route: "/"
+    },
+    {
+      title: "=>Blog",
+      route: "/blog"
+    },
+    {
+      title: "=>Contato",
+      route: "/contato"
+    }
+  ];
 
   React.useEffect(() => {
     setPath(location.pathname);
   }, [location]);
   return (
-    <Menu>
+    <Menu role="menu">
       <Container className="h-100">
         <LinkContainer>
           <div className="d-none d-sm-block">
@@ -22,21 +36,13 @@ export default function() {
           </div>
           <Nav>
             <ul>
-              <li>
-                <MenuItem to={"/"} selected={path === "/"}>
-                  =>Profile
-                </MenuItem>
-              </li>
-              <li>
-                <MenuItem to={"/blog"} selected={path === "/blog"}>
-                  =>Blog
-                </MenuItem>
-              </li>
-              <li>
-                <MenuItem to={"/contato"} selected={path === "/contato"}>
-                  =>Contato
-                </MenuItem>
-              </li>
+              {menuItens.map(i => (
+                <li>
+                  <MenuItem to={i.route} selected={path === i.route}>
+                    {i.title}
+                  </MenuItem>
+                </li>
+              ))}
             </ul>
           </Nav>
         </LinkContainer>

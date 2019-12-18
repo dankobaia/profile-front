@@ -4,6 +4,7 @@ import Colors from "../../assets/theme/colors";
 
 export const Menu = styled.div`
   position: fixed;
+  top: 0;
   background-color: ${Colors.background};
   height: 10vh;
   width: 100vw;
