@@ -36,8 +36,8 @@ export default function() {
           </div>
           <Nav>
             <ul>
-              {menuItens.map(i => (
-                <li>
+              {menuItens.map((i, index) => (
+                <li key={index}>
                   <MenuItem to={i.route} selected={path === i.route}>
                     {i.title}
                   </MenuItem>

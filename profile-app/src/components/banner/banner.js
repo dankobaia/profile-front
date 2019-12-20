@@ -1,7 +1,43 @@
-import React from "react";
-
-import { Banner } from "./styles";
+import React, { useState, useEffect } from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import { Banner, SlidingTextContainer, Picture } from "./styles";
+import CsharpIntro from "./csharpIntro";
+import profilePicture from "../../assets/images/profile-picture.jpg";
 
 export default function() {
-  return <Banner />;
+  const [step, setStep] = useState(1);
+  const [slide, setSlide] = useState();
+
+  useEffect(() => {
+    switch (step) {
+      case 1:
+        setSlide(<CsharpIntro />);
+        break;
+
+      default:
+        setStep(1);
+        break;
+    }
+  }, [step]);
+
+  return (
+    <Banner>
+      <Container className="h-100">
+        <Row className="h-100">
+          <Col className=" flex-center mb-4 mb-md-0" md={6}>
+            <Picture src={profilePicture} />
+          </Col>
+          <Col md={6} className="flex-center">
+            <SlidingTextContainer
+              onAnimationIteration={() => {
+                setStep(step + 1);
+              }}
+            >
+              {slide}
+            </SlidingTextContainer>
+          </Col>
+        </Row>
+      </Container>
+    </Banner>
+  );
 }

@@ -8,6 +8,7 @@ export const Menu = styled.div`
   background-color: ${Colors.background};
   height: 10vh;
   width: 100vw;
+  z-index: 1;
 `;
 
 export const Nav = styled.nav`
@@ -41,7 +42,7 @@ export const MenuItem = styled(Link)`
   margin-right: 5px;
   border-bottom: solid 0.25rem
     ${props => (props.selected ? Colors.primary : Colors.complementary)};
-  transition: all 0.2s ease;
+  transition: all 0.4s ease;
   height: 100%;
   color: ${Colors.text};
   font-size: 1rem;
