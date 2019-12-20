@@ -3,7 +3,7 @@ import Colors from "../../assets/theme/colors";
 
 const moveTitle = () => keyframes`
   0% {
-    transform: translate(0, -2vh);
+    transform: translate(0, -4vh);
     opacity:0
   }
   45% {
@@ -33,10 +33,8 @@ const fade = () => keyframes`
 `;
 
 export const Banner = styled.div`
-  width: 100vw;
   padding: 10vh 0;
   background-color: ${Colors.complementary};
-  margin-top: 10vh;
   min-height: 46vh;
 `;
 
@@ -50,13 +48,12 @@ export const SlidingTextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   color: white;
   animation: ${moveTitle} 8s infinite;
 `;
 
 export const MarginLeft = styled.span`
-  margin-left: 3vh;
+  margin-left: ${props => (props.space ? props.space : "3vh")};
 `;
 
 export const CSharpText = styled.p`

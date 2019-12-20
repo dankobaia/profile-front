@@ -3,11 +3,14 @@ import { Link } from "react-router-dom";
 import Colors from "../../assets/theme/colors";
 
 export const Menu = styled.div`
-  position: fixed;
-  top: 0;
+  transition: all 0.5s ease-in-out;
+  position: ${props => (props.fixed ? "fixed" : "relative")};
+  margin-top: ${props => (props.fixed ? "0vh" : "-10vh")};
+  top: 0vh;
   background-color: ${Colors.background};
+  width: 100%;
   height: 10vh;
-  width: 100vw;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   z-index: 1;
 `;
 

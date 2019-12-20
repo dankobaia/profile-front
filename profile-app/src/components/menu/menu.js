@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback, useRef } from "react";
 import { Container } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 
@@ -7,6 +7,8 @@ import { Menu, Nav, MenuItem, LinkContainer } from "./styles";
 export default function() {
   const location = useLocation();
   const [path, setPath] = useState();
+  const [fixed, setFixed] = useState(false);
+  const currentFixed = useRef(false);
   const menuItens = [
     {
       title: "=>Profile",
@@ -22,11 +24,30 @@ export default function() {
     }
   ];
 
+  const sc = useCallback(() => {
+    if (
+      !currentFixed.current &&
+      window.pageYOffset >= document.documentElement.clientHeight
+    ) {
+      setFixed(true);
+      currentFixed.current = true;
+    }
+    if (
+      currentFixed.current &&
+      window.pageYOffset <= document.documentElement.clientHeight
+    ) {
+      setFixed(false);
+      currentFixed.current = false;
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [setFixed]);
+
   React.useEffect(() => {
+    window.addEventListener("scroll", sc);
     setPath(location.pathname);
-  }, [location]);
+  }, [location, sc]);
   return (
-    <Menu role="menu">
+    <Menu role="menu" fixed={fixed}>
       <Container className="h-100">
         <LinkContainer>
           <div className="d-none d-sm-block">

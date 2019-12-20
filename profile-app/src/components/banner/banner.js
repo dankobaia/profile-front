@@ -25,7 +25,7 @@ export default function() {
       <Container className="h-100">
         <Row className="h-100">
           <Col className=" flex-center mb-4 mb-md-0" md={6}>
-            <Picture src={profilePicture} />
+            {/* <Picture src={profilePicture} /> */}
           </Col>
           <Col md={6} className="flex-center">
             <SlidingTextContainer
