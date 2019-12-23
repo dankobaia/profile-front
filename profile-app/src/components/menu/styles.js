@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Colors from "../../assets/theme/colors";
+import logo from "../../assets/images/logo.png";
 
 export const Menu = styled.div`
   transition: all 0.5s ease-in-out;
@@ -12,6 +13,10 @@ export const Menu = styled.div`
   height: 10vh;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   z-index: 1;
+`;
+
+export const MenuLogo = styled.img`
+  width: 100%;
 `;
 
 export const Nav = styled.nav`
@@ -42,6 +47,8 @@ export const LinkContainer = styled.div`
 `;
 
 export const MenuItem = styled(Link)`
+  background: ${props =>
+    props.logo ? `no-repeat center/95% url(${logo})` : "initial"};
   margin-right: 5px;
   border-bottom: solid 0.25rem
     ${props => (props.selected ? Colors.primary : Colors.complementary)};
@@ -59,8 +66,9 @@ export const MenuItem = styled(Link)`
   align-items: center;
   :hover {
     font-size: 1.1rem;
+    background-size: 100%;
     @media (min-width: 576px) {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
     }
     text-decoration: none;
     color: white;

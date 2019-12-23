@@ -2,7 +2,7 @@ import React, { useState, useCallback, useRef } from "react";
 import { Container } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 
-import { Menu, Nav, MenuItem, LinkContainer } from "./styles";
+import { Menu, MenuLogo, Nav, MenuItem, LinkContainer } from "./styles";
 
 export default function() {
   const location = useLocation();
@@ -51,8 +51,8 @@ export default function() {
       <Container className="h-100">
         <LinkContainer>
           <div className="d-none d-sm-block">
-            <MenuItem to={"/"} selected={true}>
-              Daniel Porto{" "}
+            <MenuItem to={"/"} selected={true} logo>
+              {/* <MenuLogo src={logo} /> */}
             </MenuItem>
           </div>
           <Nav>

@@ -1,6 +1,12 @@
 import React from "react";
-import { Landing } from "./styles";
+import { LandingContainer, Landing, MoreButton } from "./styles";
 
 export default function() {
-  return <Landing />;
+  return (
+    <LandingContainer>
+      <Landing>
+        <MoreButton>Saber-mais</MoreButton>
+      </Landing>
+    </LandingContainer>
+  );
 }
