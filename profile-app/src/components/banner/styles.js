@@ -4,9 +4,9 @@ import Colors from "../../assets/theme/colors";
 const moveTitle = () => keyframes`
   0% {
     transform: translate(0, -4vh);
-    opacity:0
+    opacity:0.1
   }
-  45% {
+  15% {
     transform: translate(0, 0vh);
     opacity:1
 
@@ -16,8 +16,17 @@ const moveTitle = () => keyframes`
     opacity:0.8
 
   }
+  95% {
+    transform: translate(-3vw, 0vh);
+    opacity:0.7
+
+  }
+  98% {
+    transform: translate(30vw, -0vh);
+    opacity:0
+  }
   100% {
-    transform: translate(130vh, -0vh);
+    transform: translate(0, -4vh);
     opacity:0
   }
 `;
@@ -49,7 +58,7 @@ export const SlidingTextContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   color: white;
-  animation: ${moveTitle} 8s infinite;
+  animation: ${moveTitle} 8s ease-in infinite;
 `;
 
 export const MarginLeft = styled.span`

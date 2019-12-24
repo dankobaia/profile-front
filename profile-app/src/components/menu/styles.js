@@ -6,7 +6,6 @@ import logo from "../../assets/images/logo.png";
 export const Menu = styled.div`
   transition: all 0.5s ease-in-out;
   position: ${props => (props.fixed ? "fixed" : "relative")};
-  margin-top: ${props => (props.fixed ? "0vh" : "-10vh")};
   top: 0vh;
   background-color: ${Colors.background};
   width: 100%;
@@ -52,7 +51,7 @@ export const MenuItem = styled(Link)`
   margin-right: 5px;
   border-bottom: solid 0.25rem
     ${props => (props.selected ? Colors.primary : Colors.complementary)};
-  transition: all 0.4s ease;
+  /* transition: all 0.4s ease; */
   height: 100%;
   color: ${Colors.text};
   font-size: 1rem;

@@ -3,7 +3,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Banner, SlidingTextContainer, Picture } from "./styles";
 import CsharpIntro from "./csharpIntro";
 import profilePicture from "../../assets/images/profile-picture.jpg";
-import logo from "../../assets/images/logo.png";
 
 export default function() {
   const [step, setStep] = useState(1);
@@ -25,9 +24,7 @@ export default function() {
     <Banner>
       <Container className="h-100">
         <Row className="h-100">
-          <Col className=" flex-center mb-4 mb-md-0" md={6}>
-            <Picture src={logo} />
-          </Col>
+          <Col className=" flex-center mb-4 mb-md-0" md={6}></Col>
           <Col md={6} className="flex-center">
             <SlidingTextContainer
               onAnimationIteration={() => {

@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import Colors from "../../assets/theme/colors";
 import logo from "../../assets/images/logo.png";
 
 const fade = () => keyframes`
@@ -10,9 +11,18 @@ const fade = () => keyframes`
   }
 `;
 
+const fadeout = () => keyframes`
+  0% {
+    opacity:1
+  }
+  100% {
+    opacity:0
+  }
+`;
+
 export const LandingContainer = styled.div`
-  height: 110vh;
-  background-color: black;
+  height: 100vh;
+  background-color: ${Colors.background};
 `;
 export const Landing = styled.div`
   height: 100%;
@@ -38,9 +48,29 @@ export const Landing = styled.div`
   @media (min-width: 1200px) {
     background-size: 40%;
   }
-  animation: ${fade} 3s ease;
+  animation: ${fade} 4s ease;
+`;
+
+export const AnimmationContainer = styled.div`
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  display: flex;
+  overflow: none;
+  justify-content: center;
+  align-items: center;
+  animation: ${props => (props.finished ? fadeout : "")} 0.5s linear;
 `;
 
 export const MoreButton = styled.button`
-  margin-top: 85vh;
+  margin-top: 80vh;
+  color: ${Colors.text};
+  font-size: 2rem;
+  border-radius: 5%;
+  border-width: 0.25rem;
+  border-style: solid;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  background-color: transparent;
 `;

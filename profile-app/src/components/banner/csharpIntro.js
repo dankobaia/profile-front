@@ -5,7 +5,7 @@ import { CSharpText, ColorSpan, MarginLeft } from "./styles";
 export default function banner(props) {
   return (
     <>
-      <h1 className="mb-3">//Desenvolvimento .Net</h1>
+      <h1 className="mb-3">{"//Desenvolvimento .Net"}</h1>
 
       <CSharpText>
         <ColorSpan color={"#007ACC"}>public string </ColorSpan>

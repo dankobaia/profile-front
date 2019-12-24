@@ -2,7 +2,7 @@ import React, { useState, useCallback, useRef } from "react";
 import { Container } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 
-import { Menu, MenuLogo, Nav, MenuItem, LinkContainer } from "./styles";
+import { Menu, Nav, MenuItem, LinkContainer } from "./styles";
 
 export default function() {
   const location = useLocation();
@@ -27,14 +27,18 @@ export default function() {
   const sc = useCallback(() => {
     if (
       !currentFixed.current &&
-      window.pageYOffset >= document.documentElement.clientHeight
+      window.pageYOffset * 0.93 >= document.documentElement.clientHeight
     ) {
       setFixed(true);
       currentFixed.current = true;
+      window.scrollTo({
+        top: document.documentElement.clientHeight,
+        behavior: "smooth"
+      });
     }
     if (
       currentFixed.current &&
-      window.pageYOffset <= document.documentElement.clientHeight
+      window.pageYOffset * 1.1 <= document.documentElement.clientHeight
     ) {
       setFixed(false);
       currentFixed.current = false;
