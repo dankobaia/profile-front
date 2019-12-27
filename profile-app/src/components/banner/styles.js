@@ -31,26 +31,10 @@ const moveTitle = () => keyframes`
   }
 `;
 
-const fade = () => keyframes`
-  0% {
-    opacity:0
-  }
-  100% {
-    opacity:1
-
-  }
-`;
-
 export const Banner = styled.div`
   padding: 10vh 0;
   background-color: ${Colors.complementary};
   min-height: 46vh;
-`;
-
-export const Picture = styled.img`
-  width: 17rem;
-  border-radius: 50%;
-  animation: ${fade} 0.5s ease;
 `;
 
 export const SlidingTextContainer = styled.div`

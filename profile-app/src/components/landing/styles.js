@@ -16,11 +16,22 @@ const fadeout = () => keyframes`
     opacity:1
   }
   100% {
-    opacity:0
+    opacity:0;
+    display:none;
+  }
+`;
+const slideup = () => keyframes`
+  0% {
+    margin-top:0vh
+  }
+  100% {
+    margin-top:-100vh;
   }
 `;
 
 export const LandingContainer = styled.div`
+  animation: ${props => (props.slideup ? slideup : "")} 1.5s ease;
+  display: ${props => (props.hide ? "none" : "block")};
   height: 100vh;
   background-color: ${Colors.background};
 `;
@@ -29,17 +40,15 @@ export const Landing = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   background-image: url(${logo});
-  background-position: center 30vh;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: 80%;
   @media (min-width: 576px) {
-    background-position: center 25vh;
     background-size: 70%;
   }
   @media (min-width: 768px) {
-    background-position: center 20vh;
     background-size: 65%;
   }
   @media (min-width: 1024px) {
@@ -48,7 +57,7 @@ export const Landing = styled.div`
   @media (min-width: 1200px) {
     background-size: 40%;
   }
-  animation: ${fade} 4s ease;
+  animation: ${fade} 3s ease;
 `;
 
 export const AnimmationContainer = styled.div`
@@ -60,17 +69,5 @@ export const AnimmationContainer = styled.div`
   overflow: none;
   justify-content: center;
   align-items: center;
-  animation: ${props => (props.finished ? fadeout : "")} 0.5s linear;
-`;
-
-export const MoreButton = styled.button`
-  margin-top: 80vh;
-  color: ${Colors.text};
-  font-size: 2rem;
-  border-radius: 5%;
-  border-width: 0.25rem;
-  border-style: solid;
-  padding: 0.5rem 1rem;
-  text-transform: uppercase;
-  background-color: transparent;
+  animation: ${props => (props.finished ? fadeout : "")} 0.8s linear;
 `;

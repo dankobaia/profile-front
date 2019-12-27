@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { Banner, SlidingTextContainer, Picture } from "./styles";
+import { Banner, SlidingTextContainer } from "./styles";
 import CsharpIntro from "./csharpIntro";
-import profilePicture from "../../assets/images/profile-picture.jpg";
 
 export default function() {
   const [step, setStep] = useState(1);

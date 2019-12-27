@@ -9,31 +9,23 @@ export const Menu = styled.div`
   top: 0vh;
   background-color: ${Colors.background};
   width: 100%;
+  min-height: 70px;
   height: 10vh;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   z-index: 1;
 `;
 
-export const MenuLogo = styled.img`
-  width: 100%;
+export const MenuSpacer = styled.div`
+  background-color: ${Colors.background};
+  display: ${props => (props.show ? "block" : "none")};
+  height: 10vh;
+  width: 100vw;
 `;
 
 export const Nav = styled.nav`
   height: 100%;
   display: flex;
   justify-content: space-between;
-  & > ul {
-    display: flex;
-    height: 100%;
-    list-style: none;
-    padding-inline-start: 0;
-    & > li {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-    }
-  }
 `;
 
 export const LinkContainer = styled.div`
@@ -51,7 +43,7 @@ export const MenuItem = styled(Link)`
   margin-right: 5px;
   border-bottom: solid 0.25rem
     ${props => (props.selected ? Colors.primary : Colors.complementary)};
-  /* transition: all 0.4s ease; */
+  transition: all 0.4s ease;
   height: 100%;
   color: ${Colors.text};
   font-size: 1rem;

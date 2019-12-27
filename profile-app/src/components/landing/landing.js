@@ -1,16 +1,20 @@
 import React, { useState } from "react";
-import {
-  LandingContainer,
-  Landing,
-  MoreButton,
-  AnimmationContainer
-} from "./styles";
+import { useDispatch } from "react-redux";
+import { Creators as siteActions } from "../../store/ducks/site";
+
+import { LandingContainer, Landing, AnimmationContainer } from "./styles";
 import Lottie from "react-lottie";
 import programmer from "../../assets/images/programmer.json";
+import { useEffect } from "react";
 
 export default function() {
-  const [progammerAnimationEnd, setProgammerAnimationEnd] = useState(true);
-  const [introFinished, setintroFinished] = useState(true);
+  const dispatch = useDispatch();
+
+  const [lottieAnimationEnd, setLottieAnimationEnd] = useState(false);
+  const [introFinished, setintroFinished] = useState(false);
+  const [slideupLanding, setSlideupLanding] = useState(false);
+  const [removeLanding, setRemoveLanding] = useState(false);
+
   const defaultOptions = {
     loop: false,
     autoplay: true,
@@ -20,19 +24,25 @@ export default function() {
     }
   };
 
-  function unlockSite() {
-    document.getElementsByTagName("body")[0].style.overflow = "auto";
-    window.scrollTo({
-      top: document.documentElement.clientHeight,
-      behavior: "smooth"
-    });
-  }
-
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
   return (
-    <LandingContainer>
+    <LandingContainer
+      id="landing"
+      slideup={slideupLanding}
+      hide={removeLanding}
+      onAnimationEnd={e => {
+        if (e.target.id === "landing") {
+          setRemoveLanding(true);
+          dispatch(siteActions.fixMenu());
+          dispatch(siteActions.unlockScroll());
+        }
+      }}
+    >
       {!introFinished ? (
         <AnimmationContainer
-          finished={progammerAnimationEnd}
+          finished={lottieAnimationEnd}
           onAnimationEnd={e => {
             setintroFinished(true);
           }}
@@ -45,14 +55,18 @@ export default function() {
             eventListeners={[
               {
                 eventName: "complete",
-                callback: () => setProgammerAnimationEnd(true)
+                callback: () => setLottieAnimationEnd(true)
               }
             ]}
           />
         </AnimmationContainer>
       ) : (
-        <Landing>
-          <MoreButton onClick={() => unlockSite()}>Site \/</MoreButton>
+        <Landing
+          onAnimationEnd={e => {
+            setSlideupLanding(true);
+          }}
+        >
+          {/* <MoreButton onClick={() => unlockSite()}>Site \/</MoreButton> */}
         </Landing>
       )}
     </LandingContainer>
