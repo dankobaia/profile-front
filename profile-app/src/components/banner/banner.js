@@ -1,37 +1,31 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { Banner, SlidingTextContainer } from "./styles";
-import CsharpIntro from "./csharpIntro";
+import { Banner, ProfilePicture } from "./styles";
+import picture from "../../assets/images/profile-picture.jpg";
 
 export default function() {
-  const [step, setStep] = useState(1);
-  const [slide, setSlide] = useState();
-
-  useEffect(() => {
-    switch (step) {
-      case 1:
-        setSlide(<CsharpIntro />);
-        break;
-
-      default:
-        setStep(1);
-        break;
-    }
-  }, [step]);
-
   return (
     <Banner>
       <Container className="h-100">
         <Row className="h-100">
-          <Col className=" flex-center mb-4 mb-md-0" md={6}></Col>
-          <Col md={6} className="flex-center">
-            <SlidingTextContainer
-              onAnimationIteration={() => {
-                setStep(step + 1);
-              }}
-            >
-              {slide}
-            </SlidingTextContainer>
+          <Col
+            className=" flex-center mb-4 mb-md-0  flex-column text-center text-md-left"
+            md={8}
+          >
+            <h1 className="mb-3">
+              Olá eu me chamo Daniel, sou um desenvolvedor fullstack morando no
+              Rio de Janeiro
+            </h1>
+            <p>
+              Possuo experiencia com desenvolvimento de APIs, aplicações
+              desktops e web, aplicativos Hibridos, integrações, crawlers e
+              microserviços
+            </p>
+          </Col>
+          <Col md={4} className=" flex-center mb-4 mb-md-0">
+            <picture>
+              <ProfilePicture src={picture} alt="profile picture" />
+            </picture>
           </Col>
         </Row>
       </Container>

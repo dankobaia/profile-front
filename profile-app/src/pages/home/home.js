@@ -3,5 +3,9 @@ import { Banner } from "../../components";
 // import { Container } from './styles';
 
 export default function() {
-  return <Banner />;
+  return (
+    <section>
+      <Banner />
+    </section>
+  );
 }

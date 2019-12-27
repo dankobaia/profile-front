@@ -6,7 +6,7 @@ export const { Types, Creators } = createActions({
 });
 
 const INITIAL_STATE = {
-  scrollLocked: false,
+  scrollLocked: true,
   fixedMenu: false
 };
 

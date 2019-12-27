@@ -36,7 +36,7 @@ export default function() {
         <Container className="h-100">
           <LinkContainer>
             <Nav className="d-none d-sm-block">
-              <MenuItem to={"/"} selected={true} logo="true" />
+              <MenuItem to={"/"} logo="true" />
             </Nav>
             <Nav>
               {menuItens.map((i, index) => (

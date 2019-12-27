@@ -31,10 +31,12 @@ const moveTitle = () => keyframes`
   }
 `;
 
-export const Banner = styled.div`
+export const Banner = styled.header`
+  text-shadow: 1px 1px 2px black;
   padding: 10vh 0;
   background-color: ${Colors.complementary};
   min-height: 46vh;
+  color: ${Colors.text};
 `;
 
 export const SlidingTextContainer = styled.div`
@@ -55,4 +57,11 @@ export const CSharpText = styled.p`
 
 export const ColorSpan = styled.span`
   color: ${props => props.color};
+`;
+
+export const ProfilePicture = styled.img`
+  border-radius: 50%;
+  width: 19rem;
+  box-shadow: #00000057 2px 2px 2px;
+  opacity: 0.9;
 `;

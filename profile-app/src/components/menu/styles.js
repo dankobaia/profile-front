@@ -41,8 +41,11 @@ export const MenuItem = styled(Link)`
   background: ${props =>
     props.logo ? `no-repeat center/95% url(${logo})` : "initial"};
   margin-right: 5px;
-  border-bottom: solid 0.25rem
-    ${props => (props.selected ? Colors.primary : Colors.complementary)};
+  border-bottom: solid
+    ${props =>
+      props.selected
+        ? `0.25rem  ${Colors.primary}`
+        : `0.0rem ${Colors.complementary}`};
   transition: all 0.4s ease;
   height: 100%;
   color: ${Colors.text};
