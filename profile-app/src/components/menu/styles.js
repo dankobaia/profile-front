@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Colors from "../../assets/theme/colors";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/logo.svg";
 
 export const Menu = styled.div`
   transition: all 0.5s ease-in-out;

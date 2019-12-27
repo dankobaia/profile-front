@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import { Home } from "./pages";
 
 export default function() {
@@ -14,6 +14,9 @@ export default function() {
     <Switch>
       <Route exact path="/">
         <Home />
+      </Route>
+      <Route exact path="/profile-front">
+        <Redirect to="/" />
       </Route>
       <Route path="/blog">
         <p>Blog</p>

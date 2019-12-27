@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import Colors from "../../assets/theme/colors";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/logo.svg";
 
 const fade = () => keyframes`
   0% {
