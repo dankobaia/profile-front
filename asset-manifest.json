@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.5743a31c.chunk.css",
-    "main.js": "/static/js/main.8bb75d1a.chunk.js",
-    "main.js.map": "/static/js/main.8bb75d1a.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.8f20764f.js",
-    "runtime-main.js.map": "/static/js/runtime-main.8f20764f.js.map",
-    "static/css/2.17e5ed98.chunk.css": "/static/css/2.17e5ed98.chunk.css",
-    "static/js/2.7e98b390.chunk.js": "/static/js/2.7e98b390.chunk.js",
-    "static/js/2.7e98b390.chunk.js.map": "/static/js/2.7e98b390.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.fe9111882058defc50d972aa6b960275.js": "/precache-manifest.fe9111882058defc50d972aa6b960275.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.17e5ed98.chunk.css.map": "/static/css/2.17e5ed98.chunk.css.map",
-    "static/css/main.5743a31c.chunk.css.map": "/static/css/main.5743a31c.chunk.css.map",
-    "static/js/2.7e98b390.chunk.js.LICENSE": "/static/js/2.7e98b390.chunk.js.LICENSE",
-    "static/media/fonts.css": "/static/media/FiraCode-Regular.841b9e8a.woff",
-    "static/media/logo.png": "/static/media/logo.dd9b4ad2.png"
+    "main.css": "/profile/static/css/main.8ae23e8f.chunk.css",
+    "main.js": "/profile/static/js/main.42358d40.chunk.js",
+    "main.js.map": "/profile/static/js/main.42358d40.chunk.js.map",
+    "runtime-main.js": "/profile/static/js/runtime-main.08de336b.js",
+    "runtime-main.js.map": "/profile/static/js/runtime-main.08de336b.js.map",
+    "static/css/2.17e5ed98.chunk.css": "/profile/static/css/2.17e5ed98.chunk.css",
+    "static/js/2.275c6e9e.chunk.js": "/profile/static/js/2.275c6e9e.chunk.js",
+    "static/js/2.275c6e9e.chunk.js.map": "/profile/static/js/2.275c6e9e.chunk.js.map",
+    "index.html": "/profile/index.html",
+    "precache-manifest.a147f134b7cd4f8c9d11e1b9ec26a9c2.js": "/profile/precache-manifest.a147f134b7cd4f8c9d11e1b9ec26a9c2.js",
+    "service-worker.js": "/profile/service-worker.js",
+    "static/css/2.17e5ed98.chunk.css.map": "/profile/static/css/2.17e5ed98.chunk.css.map",
+    "static/css/main.8ae23e8f.chunk.css.map": "/profile/static/css/main.8ae23e8f.chunk.css.map",
+    "static/js/2.275c6e9e.chunk.js.LICENSE": "/profile/static/js/2.275c6e9e.chunk.js.LICENSE",
+    "static/media/fonts.css": "/profile/static/media/FiraCode-Regular.841b9e8a.woff",
+    "static/media/logo.png": "/profile/static/media/logo.dd9b4ad2.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.8f20764f.js",
+    "static/js/runtime-main.08de336b.js",
     "static/css/2.17e5ed98.chunk.css",
-    "static/js/2.7e98b390.chunk.js",
-    "static/css/main.5743a31c.chunk.css",
-    "static/js/main.8bb75d1a.chunk.js"
+    "static/js/2.275c6e9e.chunk.js",
+    "static/css/main.8ae23e8f.chunk.css",
+    "static/js/main.42358d40.chunk.js"
   ]
 }
