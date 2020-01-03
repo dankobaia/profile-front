@@ -1,4 +1,6 @@
 import styled, { keyframes } from "styled-components";
+import { Container as BSContainer } from "react-bootstrap";
+
 import Colors from "../../assets/theme/colors";
 
 const moveTitle = () => keyframes`
@@ -31,11 +33,14 @@ const moveTitle = () => keyframes`
   }
 `;
 
+export const Container = styled(BSContainer)`
+  padding: 5vh 0vh;
+`;
+
 export const Banner = styled.header`
+  position: relative;
   text-shadow: 1px 1px 2px black;
-  padding: 10vh 0;
   background-color: ${Colors.complementary};
-  min-height: 46vh;
   color: ${Colors.text};
 `;
 

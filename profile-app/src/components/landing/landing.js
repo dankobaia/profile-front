@@ -25,7 +25,8 @@ export default function() {
   };
 
   useEffect(() => {
-    window.scrollTo({ top: 0 });
+    window.scrollTo(0, 0);
+    console.log("scroll");
   }, []);
   return (
     <LandingContainer

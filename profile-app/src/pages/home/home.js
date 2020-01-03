@@ -4,7 +4,7 @@ import { Banner } from "../../components";
 
 export default function() {
   return (
-    <section>
+    <section style={{ backgroundColor: "black" }}>
       <Banner />
     </section>
   );

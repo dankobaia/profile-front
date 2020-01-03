@@ -1,13 +1,16 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import { Banner, ProfilePicture } from "./styles";
+import { Row, Col } from "react-bootstrap";
+import Particles from "../particles";
+import { Banner, ProfilePicture, Container } from "./styles";
 import picture from "../../assets/images/profile-picture.jpg";
 
 export default function() {
   return (
     <Banner>
-      <Container className="h-100">
-        <Row className="h-100">
+      <Particles />
+
+      <Container>
+        <Row>
           <Col
             className=" flex-center mb-4 mb-md-0  flex-column text-center text-md-left"
             md={8}
