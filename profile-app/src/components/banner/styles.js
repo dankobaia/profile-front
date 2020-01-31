@@ -39,6 +39,7 @@ export const Container = styled(BSContainer)`
 
 export const Banner = styled.header`
   text-shadow: 2px 2px 2px black;
+  min-height: 408px;
   background-color: ${Colors.complementary};
   color: ${Colors.text};
 `;

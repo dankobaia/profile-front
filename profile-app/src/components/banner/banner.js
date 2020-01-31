@@ -9,13 +9,15 @@ export default function() {
   const [vantaEffect, setVantaEffect] = useState(0);
   const myRef = useRef(null);
   useEffect(() => {
-    if (!vantaEffect) {
+    console.log(myRef.current && myRef.current.clientHeight);
+    if (!vantaEffect && myRef.current) {
       setVantaEffect(
         BIRDS({
           THREE: THREE,
           el: myRef.current,
           mouseControls: true,
           touchControls: true,
+          minHeight: 408,
           scale: 1.0,
           scaleMobile: 1.0,
           points: 7.0,
