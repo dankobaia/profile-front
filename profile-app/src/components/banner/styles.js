@@ -38,8 +38,7 @@ export const Container = styled(BSContainer)`
 `;
 
 export const Banner = styled.header`
-  position: relative;
-  text-shadow: 1px 1px 2px black;
+  text-shadow: 2px 2px 2px black;
   background-color: ${Colors.complementary};
   color: ${Colors.text};
 `;

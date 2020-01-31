@@ -1,14 +1,39 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Row, Col } from "react-bootstrap";
-import Particles from "../particles";
 import { Banner, ProfilePicture, Container } from "./styles";
+import BIRDS from "vanta/dist/vanta.net.min.js";
+import * as THREE from "three";
 import picture from "../../assets/images/profile-picture.jpg";
 
 export default function() {
-  return (
-    <Banner>
-      <Particles />
+  const [vantaEffect, setVantaEffect] = useState(0);
+  const myRef = useRef(null);
+  useEffect(() => {
+    if (!vantaEffect) {
+      setVantaEffect(
+        BIRDS({
+          THREE: THREE,
+          el: myRef.current,
+          mouseControls: true,
+          touchControls: true,
+          scale: 1.0,
+          scaleMobile: 1.0,
+          points: 7.0,
+          maxDistance: 25.0,
+          spacing: 18.0,
+          showDots: true,
+          backgroundColor: 0x0,
+          color: 0x248a3d
+        })
+      );
+    }
+    return () => {
+      if (vantaEffect) vantaEffect.destroy();
+    };
+  }, [vantaEffect]);
 
+  return (
+    <Banner ref={myRef}>
       <Container>
         <Row>
           <Col
